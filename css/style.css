@@ -10,3 +10,33 @@ h1 {
     font-weight: 600;
     font-size: 78px;
 }
+
+main {
+    background-image: url("../img/cork.png");
+    background-size: cover;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+
+#post-container {
+    max-width: 90%;
+    /*background-color: yellow;*/
+    margin: 0 auto;
+    padding: 16px 0px;
+}
+
+#post-photo {
+    max-width: 100%;
+    min-height: 320px;
+    background-color: purple;
+    color: grey;
+    font-size: 24px;
+}
+
+#post-caption {
+    padding-top: 16px;
+    font-family: "Edu TAS Beginner", serif;
+    font-weight: 100;
+}
