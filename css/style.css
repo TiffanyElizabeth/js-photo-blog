@@ -25,6 +25,7 @@ main {
     /*background-color: yellow;*/
     margin: 0 auto;
     padding: 16px 0px;
+    position: relative; /* added in order to resolve pushpin positioning */
 }
 
 #post-photo {
@@ -39,4 +40,12 @@ main {
     padding-top: 16px;
     font-family: "Edu TAS Beginner", serif;
     font-weight: 100;
+}
+
+.pushpin {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    transform: translateX(-50%); /* shifts the img by half of its width, thus centering the image with the center of the container */
 }
