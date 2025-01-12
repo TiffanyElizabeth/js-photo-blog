@@ -25,6 +25,10 @@ main {
     margin-bottom: 1rem;
 }
 
+#post {
+    box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px; /* taken from #2 https://getcssscan.com/css-box-shadow-examples and adjusted opacity */ 
+}
+
 #post-container {
     max-width: 90%;
     /*background-color: yellow;*/
