@@ -16,6 +16,11 @@ main {
     background-size: cover;
 }
 
+.main-container {
+    max-width: 300px; /* for mobile screens - default */
+    margin: 0 auto;
+}
+
 .row {
     margin-bottom: 1rem;
 }
@@ -30,7 +35,7 @@ main {
 
 #post-photo {
     max-width: 100%;
-    min-height: 320px;
+    min-height: 264px;
     background-color: purple;
     color: grey;
     font-size: 24px;
@@ -48,4 +53,17 @@ main {
     left: 50%;
     top: -12px;
     transform: translateX(-50%); /* shifts the img by half of its width, thus centering the image with the center of the container */
+}
+
+/* responsive */
+@media (min-width: 768px) {
+    .main-container {
+        max-width: 620px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-container {
+        max-width: 940px;
+    }
 }
