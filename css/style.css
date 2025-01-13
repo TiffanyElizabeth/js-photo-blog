@@ -27,6 +27,7 @@ main {
 
 #post {
     box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px; /* taken from #2 https://getcssscan.com/css-box-shadow-examples and adjusted opacity */ 
+    min-height: 382px;
 }
 
 #post-container {
@@ -38,7 +39,7 @@ main {
 }
 
 #post-photo {
-    max-width: 100%;
+    max-width: 100%; /* creates problems in desktop mode when window is shrunk, until it changes to tablet mode - alternative is set width: 264px like I've done with height but this can also create other problems */
     height: 264px; /* can't get this to work without defining height explicitly */
     background-color: purple;
     color: grey;
@@ -46,7 +47,7 @@ main {
     overflow: hidden;
 }
 
-.post-img {
+#post-img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
@@ -56,6 +57,7 @@ main {
     padding-top: 16px;
     font-family: "Edu TAS Beginner", serif;
     font-weight: 100;
+    text-transform: capitalize;
 }
 
 .pushpin {
