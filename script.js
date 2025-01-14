@@ -43,15 +43,10 @@ Bonus
 */
 
 
-const postContainerElm = document.getElementById("post-container");
-const postPhotoElm = document.getElementById("post-photo");
-const postCaptionElm = document.getElementById("post-caption");
 const rowElm = document.querySelector(".row");
-const colElm = document.getElementById("col");
 const overlayElm = document.getElementById("image-overlay");
 const overlayImgElm = document.getElementById("overlay-img");
 const closeBtnElm = document.getElementById("close-btn");
-const postsElm = document.querySelectorAll(".post");
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => {
     const photos = res.data;
