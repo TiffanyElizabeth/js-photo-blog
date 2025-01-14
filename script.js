@@ -49,10 +49,10 @@ const overlayImgElm = document.getElementById("overlay-img");
 const closeBtnElm = document.getElementById("close-btn");
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => {
-    const photos = res.data;
-    photos.forEach((photo) => {
-        console.log(photo);
-        rowElm.innerHTML += 
+    const photos = res.data; // creates photos as the data from website above 
+    photos.forEach((photo) => { // customizes a post for the data in each photo accessed from the website (total of 6)
+        console.log(photo); // lets me check each object (photo)
+        rowElm.innerHTML += // customizes each post 
         `
             <div class="col">
                 <div id="post" class="bg-white">
@@ -69,21 +69,21 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
         `;
     });
 
-    const posts = document.querySelectorAll(".col")
-    console.log(posts);
+    const posts = document.querySelectorAll(".col") // gets posts - as we want the overlay to display when anywhere on each post is clicked, I have opted to select all .col 
+    console.log(posts); // allows me to check NodeList in console (all 6 are present)
 
-    posts.forEach((post) => {
-        console.log(post);
+    posts.forEach((post) => { // arrow function that makes each post clickable, displaying overlay with the clicked post's image and alt 
+        console.log(post); // allows me to check that the information is correctly accessed 
 
         post.addEventListener("click", () => {
-            const postImgElm = post.querySelector(".post-img");
-            overlayElm.style.display = "flex";
-            overlayImgElm.src = postImgElm.src;
-            overlayImgElm.alt = postImgElm.alt;
+            const postImgElm = post.querySelector(".post-img"); // gets postImg in order to access src and alt
+            overlayElm.style.display = "flex"; // displays overlay when post is clicked
+            overlayImgElm.src = postImgElm.src; // syncs overlay photo to post photo which is clicked
+            overlayImgElm.alt = postImgElm.alt; // syncs overlay alt to clicked post photo alt 
         })        
     })
 });
 
 closeBtnElm.addEventListener("click", () => {
-    overlayElm.style.display = "none";
+    overlayElm.style.display = "none"; // closes overlay
 }); 
