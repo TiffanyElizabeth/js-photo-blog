@@ -25,6 +25,12 @@ main {
     margin-bottom: 1rem;
 }
 
+#post:hover {
+    transform: rotate(10deg);
+    box-shadow: rgba(0, 0, 0, 0.6) 2.95px 2.95px 3.9px;
+    transition: 0.4s ease;
+}
+
 #post {
     box-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px; /* taken from #2 https://getcssscan.com/css-box-shadow-examples and adjusted opacity */ 
     min-height: 382px;
