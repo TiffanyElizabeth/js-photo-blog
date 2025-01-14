@@ -30,7 +30,7 @@ Milestone 1
 .. DONE Facciamo in modo di creare un overlay che copra l’intera pagina e all’interno, centrata, disponiamo un’immagine qualunque ed un button di chiusura.
 
 Milestone 2
-.. Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
+.. DONE Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
 .. Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
 .. Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 
@@ -51,6 +51,10 @@ const postImgElm = document.getElementById("post-img");
 const postCaptionElm = document.getElementById("post-caption");
 const rowElm = document.querySelector(".row");
 const colElm = document.getElementById("col");
+const overlayElm = document.getElementById("image-overlay");
+const overlayImgElm = document.getElementById("overlay-img");
+const closeBtnElm = document.getElementById("close-btn");
+const postsElm = document.querySelectorAll(".post");
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => {
     const photos = res.data;
@@ -70,6 +74,21 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
                     </div>
                 </div>
             </div>   
-        `
+        `;
+    });
+
+    const posts = document.querySelectorAll(".col")
+    console.log(posts);
+
+    posts.forEach((post) => {
+        console.log(post);
+
+        post.addEventListener("click", () => {
+            overlayElm.style.display = "flex";
+        })        
     })
 });
+
+closeBtnElm.addEventListener("click", () => {
+    overlayElm.style.display = "none";
+}); 
