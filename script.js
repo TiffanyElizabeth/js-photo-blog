@@ -34,7 +34,7 @@ Milestone 2
 .. DONE Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 
 Milestone 3
-.. Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
+.. DONE Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
 Ci sono diversi modi di farlo, prova a sperimentare 
 
 Bonus
@@ -45,7 +45,6 @@ Bonus
 
 const postContainerElm = document.getElementById("post-container");
 const postPhotoElm = document.getElementById("post-photo");
-const postImgElm = document.getElementById("post-img");
 const postCaptionElm = document.getElementById("post-caption");
 const rowElm = document.querySelector(".row");
 const colElm = document.getElementById("col");
@@ -82,7 +81,10 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
         console.log(post);
 
         post.addEventListener("click", () => {
+            const postImgElm = post.querySelector(".post-img");
             overlayElm.style.display = "flex";
+            overlayImgElm.src = postImgElm.src;
+            overlayImgElm.alt = postImgElm.alt;
         })        
     })
 });
