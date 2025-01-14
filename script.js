@@ -55,7 +55,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then((res) => 
         rowElm.innerHTML += // customizes each post 
         `
             <div class="col">
-                <div id="post" bg-white">
+                <div id="post" class="bg-white">
                     <div id="post-container">
                         <img src="img/pin.svg" alt="pin" class="pushpin">
                         <div id="post-photo" class="d-flex justify-content-center align-items-center">
