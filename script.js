@@ -27,7 +27,7 @@ Non siete obbligati a usare Bootstrap: siete liberi di decidere come gestire lo 
 /* 
 SECONDA CONSEGNA 
 Milestone 1
-.. Facciamo in modo di creare un overlay che copra l’intera pagina e all’interno, centrata, disponiamo un’immagine qualunque ed un button di chiusura.
+.. DONE Facciamo in modo di creare un overlay che copra l’intera pagina e all’interno, centrata, disponiamo un’immagine qualunque ed un button di chiusura.
 
 Milestone 2
 .. Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
@@ -39,7 +39,8 @@ Milestone 3
 Ci sono diversi modi di farlo, prova a sperimentare 
 
 Bonus
-.. Spostandosi col mouse sopra le foto, queste si zoommano, ruotano di 10 gradi e la loro ombra aumenta, il tutto in manierà fluida. Inoltre il mouse diventa un puntatore, per far capire all’utente che può cliccare
+.. Spostandosi col mouse sopra le foto, queste si zoommano, ruotano di 10 gradi e la loro ombra aumenta, il tutto in manierà fluida. 
+.. Inoltre il mouse diventa un puntatore, per far capire all’utente che può cliccare
 */
 
 /* PRIMA CONSEGNA, Milestone 3 */

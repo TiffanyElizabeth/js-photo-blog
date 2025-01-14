@@ -80,3 +80,25 @@ main {
         max-width: 940px;
     }
 }
+
+/* overlay */
+#image-overlay {
+    position: fixed; /* keep overlay static even when page is scrolled */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+}
+
+#close-btn {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#overlay-img {
+    max-width: 25%;
+    max-height: 25%;
+}
